@@ -327,6 +327,14 @@ TVM_REGISTER_TARGET_KIND("c", kDLCPU)
     .set_default_keys({"cpu"})
     .set_target_parser(tvm::target::parsers::cpu::ParseTarget);
 
+TVM_REGISTER_TARGET_KIND("rawc", kDLCPU)
+    .add_attr_option<String>("mcpu")
+    .add_attr_option<String>("march")
+    .add_attr_option<Integer>("workspace-byte-alignment")
+    .add_attr_option<Integer>("constants-byte-alignment")
+    .set_default_keys({"cpu"})
+    .set_target_parser(tvm::target::parsers::cpu::ParseTarget);
+
 TVM_REGISTER_TARGET_KIND("cuda", kDLCUDA)
     .add_attr_option<String>("mcpu")
     .add_attr_option<String>("arch")

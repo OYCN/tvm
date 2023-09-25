@@ -271,6 +271,7 @@ class Device(ctypes.Structure):
         "stackvm": kDLCPU,
         "cpu": kDLCPU,
         "c": kDLCPU,
+        "rawc": kDLCPU,
         "test": kDLCPU,
         "hybrid": kDLCPU,
         "composite": kDLCPU,
